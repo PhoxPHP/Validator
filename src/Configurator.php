@@ -42,7 +42,7 @@ class Configurator
 		}
 
 		$sourceDir = __DIR__;
-		copy($sourceDir . '/config.framework', $sourceDir . '/configuration.php');
+		copy($sourceDir . '/configuration.framework', $sourceDir . '/configuration.php');
 	}
 
 }
