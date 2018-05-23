@@ -1,0 +1,20 @@
+{
+	"name": "phoxphp/validator",
+	"description": "PhoxPHP validation component",
+	"type": "project",
+	"keywords": ["php", "php7", "validation"],
+	"author": [
+		{
+			"name": "Peter Taiwo",
+			"email": "taiwop3@gmail.com"
+		}
+	],
+	"require": {
+		"php": ">=7.0.6"
+	},
+	"autoload": {
+		"psr-4": {
+			"Kit\\Validator\\": "src"
+		}
+	}
+}
