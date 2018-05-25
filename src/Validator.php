@@ -135,7 +135,7 @@ class Validator
 	}
 
 	/**
-	* Returns an array of first rule errors without keys.
+	* Returns an array of first rule errors with keys.
 	*
 	* @access 	public
 	* @return 	Array
