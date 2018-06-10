@@ -1,19 +1,16 @@
 <?php
 /**
-* @author 	Peter Taiwo
-* @package 	Kit\Validator\Validator
+* @author 		Peter Taiwo <peter@phoxphp.com>
+* @package 		Kit\Validator\Validator
+* @license 		MIT License
 *
-* MIT License
 * Permission is hereby granted, free of charge, to any person obtaining a copy
 * of this software and associated documentation files (the "Software"), to deal
 * in the Software without restriction, including without limitation the rights
 * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 * copies of the Software, and to permit persons to whom the Software is
 * furnished to do so, subject to the following conditions:
-
-* The above copyright notice and this permission notice shall be included in all
-* copies or substantial portions of the Software.
-
+*
 * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -43,7 +40,7 @@ class Validator
 	* Validator construct
 	*
 	* @access 	public
-	* @return 	void
+	* @return 	<void>
 	*/
 	public function __construct()
 	{
@@ -58,7 +55,7 @@ class Validator
 	* @param 	$rule <String> | rule class name
 	* @param 	$options <Array> | array of rule parameters
 	* @access 	public
-	* @return 	Object
+	* @return 	<void>
 	*/
 	public function createRule(String $label, $value, String $rule, ...$options)
 	{
@@ -81,7 +78,7 @@ class Validator
 	* Checks if validation has errors.
 	*
 	* @access 	public
-	* @return 	Boolean
+	* @return 	<Boolean>
 	*/
 	public function hasErrors() : Bool
 	{
@@ -96,7 +93,7 @@ class Validator
 	* Returns all rule errors.
 	*
 	* @access 	public
-	* @return 	Array
+	* @return 	<Array>
 	*/
 	public function getAllErrors()
 	{
@@ -108,6 +105,7 @@ class Validator
 	*
 	* @param 	$label <String>
 	* @access 	public
+	* @return 	<Mixed>
 	*/
 	public function getRuleErrors(String $label)
 	{
@@ -119,9 +117,9 @@ class Validator
 	* Returns an array of first rule errors without keys.
 	*
 	* @access 	public
-	* @return 	Array
+	* @return 	<Array>
 	*/
-	public function getErrorsIndex()
+	public function getErrorsIndex() : Array
 	{
 		$errors = [];
 
@@ -138,9 +136,9 @@ class Validator
 	* Returns an array of first rule errors with keys.
 	*
 	* @access 	public
-	* @return 	Array
+	* @return 	<Array>
 	*/
-	public function getErrorsIndexWithKey()
+	public function getErrorsIndexWithKey() : Array
 	{
 		$errors = [];
 
