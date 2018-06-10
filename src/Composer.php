@@ -1,19 +1,16 @@
 <?php
 /**
-* @author 	Peter Taiwo
-* @package 	Kit\Validator\RuleBag
+* @author 		Peter Taiwo <peter@phoxphp.com>
+* @package 		Kit\Validator\Composer
+* @license 		MIT License
 *
-* MIT License
 * Permission is hereby granted, free of charge, to any person obtaining a copy
 * of this software and associated documentation files (the "Software"), to deal
 * in the Software without restriction, including without limitation the rights
 * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 * copies of the Software, and to permit persons to whom the Software is
 * furnished to do so, subject to the following conditions:
-
-* The above copyright notice and this permission notice shall be included in all
-* copies or substantial portions of the Software.
-
+*
 * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -25,16 +22,24 @@
 
 namespace Kit\Validator;
 
-use Kit\Validator\Contracts\RuleContract;
-
-class RuleBag
+class Composer
 {
 
 	/**
-	* @var 		$rules
-	* @access 	protected
+	* Resolves configuration files for framework.
+	*
+	* @access 	public
+	* @return 	<void>
 	* @static
 	*/
-	protected static $rules = [];
+	public static function postCreateProjectCmd()
+	{
+		if(file_exists('configuration.php')) {
+			unlink('configuration.php');
+		}
+
+		$sourceDir = __DIR__;
+		copy($sourceDir . '/configuration.framework', $sourceDir . '/configuration.php');
+	}
 
 }

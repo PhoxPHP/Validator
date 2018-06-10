@@ -1,19 +1,16 @@
 <?php
 /**
-* @author 	Peter Taiwo
-* @package 	Kit\Validator\ValidationErrorBag
+* @author 		Peter Taiwo <peter@phoxphp.com>
+* @package 		Kit\Validator\ValidationErrorBag
+* @license 		MIT License
 *
-* MIT License
 * Permission is hereby granted, free of charge, to any person obtaining a copy
 * of this software and associated documentation files (the "Software"), to deal
 * in the Software without restriction, including without limitation the rights
 * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 * copies of the Software, and to permit persons to whom the Software is
 * furnished to do so, subject to the following conditions:
-
-* The above copyright notice and this permission notice shall be included in all
-* copies or substantial portions of the Software.
-
+*
 * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -45,7 +42,7 @@ class ValidationErrorBag
 	* @param 	$ruleError <String>
 	* @param 	$rule <Kit\Validator\Contracts\AbstractRuleContract>
 	* @access 	public
-	* @return 	void
+	* @return 	<void>
 	*/
 	public function setValidationRuleError(AbstractRuleContract $rule, String $ruleError)
 	{
@@ -71,7 +68,7 @@ class ValidationErrorBag
 	*
 	* @param 	$label <String>
 	* @access 	protected
-	* @return 	Boolean
+	* @return 	<Boolean>
 	*/
 	protected function ruleHasErrors(String $label) : Bool
 	{
@@ -86,10 +83,10 @@ class ValidationErrorBag
 	* Returns array of rules errors.
 	*
 	* @access 	public
-	* @return 	Array
+	* @return 	<Array>
 	* @static
 	*/
-	public static function getRulesErrors()
+	public static function getRulesErrors() : Array
 	{
 		return ValidationErrorBag::$errors;
 	}
@@ -99,7 +96,7 @@ class ValidationErrorBag
 	*
 	* @param 	$label <String>
 	* @access 	public
-	* @return 	Mixed
+	* @return 	<Mixed>
 	* @static
 	*/
 	public static function getRuleErrors(String $label)
